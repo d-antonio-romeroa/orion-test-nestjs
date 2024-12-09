@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "71652bce-d30b-4864-ae12-343bfaea6b1b",
+		"name": "ORION TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20473175"
+	},
+	"item": [
+		{
+			"name": "GET BOOKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/books",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKS AVERAGE PAGES PER CHAPTER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/books/average-pages-per-chapter",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"books",
+						"average-pages-per-chapter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET AUTHORS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/authors",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET AUTHOR BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/authors/67570409d6b73d141eb6c569",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"authors",
+						"67570409d6b73d141eb6c569"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD AUTHOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"author 214\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/authors",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD BOOKS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"nombresdf 35\",\n    \"chapters\": 10,\n    \"pages\": 5,\n    \"authors\": [{\n        \"name\": \"author 1\"\n    }, {\"name\": \"juan pablo\"}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/books",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
